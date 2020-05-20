@@ -35,7 +35,7 @@ app.post("/api/notes", function(req, res) {
     savedNotes.push(newNote);
 
     fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes));
-    console.log("Note saved to db.json. Content: ", newNote);
+    console.log("Note saved:", newNote);
     res.json(savedNotes);
 })
 
