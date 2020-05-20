@@ -44,12 +44,12 @@ app.delete("/api/notes/:id", function(req, res) {
     let noteID = req.params.id;
     let newID = 0;
     console.log(`Deleting note with ID ${noteID}`);
-    savedNotes = savedNotes.filter(currNote => {
-        return currNote.id != noteID;
+    savedNotes = savedNotes.filter(currentNote => {
+        return currentNote.id != noteID;
     })
     
-    for (currNote of savedNotes) {
-        currNote.id = newID.toString();
+    for (currentNote of savedNotes) {
+        currentNote.id = newID.toString();
         newID++;
     }
 
