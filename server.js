@@ -43,7 +43,7 @@ app.delete("/api/notes/:id", function(req, res) {
     let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
     let noteID = req.params.id;
     let newID = 0;
-    console.log(`Deleting note with ID ${noteID}`);
+    console.log("Deleted note");
     savedNotes = savedNotes.filter(currentNote => {
         return currentNote.id != noteID;
     })
