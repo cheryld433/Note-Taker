@@ -19,7 +19,7 @@ This aplication  is a server side application  using Express.js. With this appli
 npm install
 
 ## Usage:
-![](demo.gif);
+![](demo.gif)
 
 
 
