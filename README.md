@@ -13,24 +13,20 @@ This aplication  is a server side application  using Express.js. With this appli
 
   * [License](#license)
 
-  * [Contributors](#contributors)
-
-  * [Tests](#tests)
-
-  * [Questions](#questions)
 
 
 ## Installation:
 npm install
 
 ## Usage:
+![](demo.gif);
 
 
-## Contributors:
 
 
-## Tests:
 
 
-#### Questions:
+
+
+
 
