@@ -16,6 +16,21 @@ module.exports = function(app) {
         app.get("/api/notes", function(req, res){
             res.json(savedNote);
         });
+
+        app.post("/api/notes", function(req, res){
+
+            if (savedNote.length == 0){
+                req.body.id = "0";
+            } else{
+                req.body.id = JSON.stringify(JSON.parse(savedNote[savedNote.length - 1].id) + 1);
+            }
+            
+            console.log("id:" + req.body.id);
+    
+            savedNote.push(req.body);
+            console.log(savedNote);
+            res.json(req.body);
+        });
     
     }
 
