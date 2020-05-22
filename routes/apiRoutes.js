@@ -31,7 +31,6 @@ module.exports = function(app){
         console.log("req.body.id: " + req.body.id);
 
         savedNote.push(req.body);
-        // writeToDBase(savedNote);
         console.log(savedNote);
         res.json(req.body);
     });
@@ -39,7 +38,6 @@ module.exports = function(app){
     app.delete("/api/notes/:id", function(req, res){
         
         let id = req.params.id.toString();
-        // console.log(id);
 
         for (i=0; i < savedNote.length; i++){
            
@@ -49,12 +47,8 @@ module.exports = function(app){
                 savedNote.splice(i,1);
                 break;
             }
-
-        
         }
 
-        // Write notes data to database
         writeToDBase(savedNote);
-
     });
 };
