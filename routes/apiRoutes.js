@@ -31,6 +31,24 @@ module.exports = function(app) {
             console.log(savedNote);
             res.json(req.body);
         });
+
+        app.delete("/api/notes/:id", function(req, res){
+    
+            let id = req.params.id.toString();
+            console.log(id);
+    
+            for (i=0; i < savedNote.length; i++){
+               
+                if (savedNote[i].id == id){
+                    console.log("Note saved");
+                    res.send(savedNote[i]);
+                    savedNote.splice(i,1);
+                    break;
+                }
+            }
+            writeToDBase(savedNote);
+    
+        });
     
     }
 
